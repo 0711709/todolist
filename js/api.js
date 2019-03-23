@@ -45,7 +45,7 @@
      */
     function send(method, action, data, onSuccess, onError) {
         let http = new XMLHttpRequest();
-        let baseUrl = 'http://mock.biaoyansu.com/api/1/';
+        let baseUrl = 'https://mock.biaoyansu.com/api/1/';
         let timestamp = (new Date).getTime();
         // 这个地方填你的应用key
 

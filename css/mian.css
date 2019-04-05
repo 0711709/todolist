@@ -60,6 +60,9 @@ form button:focus {
 @media screen and (max-width: 500px) {
     .container-xs {
         max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0rem;
     }
 }
 

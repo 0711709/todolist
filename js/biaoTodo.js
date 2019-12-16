@@ -21,7 +21,6 @@
         //首先获取后端数据
         api.get("todo/read", $ => {
             let data = $.data;
-
             //循环数组 获取数据
             if (data)
                 data.forEach(it => {

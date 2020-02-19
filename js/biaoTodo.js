@@ -123,6 +123,12 @@
                 form.reset();
             } else {
                 api("todo/update", { id: text.$id, title: data.title });
+                if (data.title && data.title.length) {
+                    let rows = Math.ceil(data.title.length / 50)
+                    text.$title.rows = rows > 20 ? 20 : rows
+                } else {
+                    text.$title.rows = 1
+                }
                 text.$title.innerHTML = data.title;
                 form.reset();
                 text.$id = null;

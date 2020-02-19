@@ -54,10 +54,17 @@
         })
 
         //渲染 title
-        let title = document.createElement("div");
+        let title = document.createElement("textarea");
         title.classList.add("title");
         title.innerText = it.title;
         title.$id = it.id;
+        title.readOnly = true;
+        if (it.title && it.title.length) {
+            let rows = Math.ceil(it.title.length / 50)
+            title.rows = rows > 20 ? 20 : rows
+        } else {
+            title.rows = 1
+        }
         item.appendChild(title);
 
         //渲染 button

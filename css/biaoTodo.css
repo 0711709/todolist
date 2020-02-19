@@ -34,9 +34,9 @@
 
 .todo-item .ops {
     width: 20%;
-    text-align: right;
+    text-align: center;
 }
 
 .todo-item .ops > * {
-    margin: 0 .2rem;
+    margin: .1rem;
 }

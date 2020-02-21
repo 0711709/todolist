@@ -102,12 +102,16 @@
     function submit() {
         form.addEventListener("submit", e => {
             e.preventDefault();
+            
+            if (!text.value) {
+                console.log('空数据')
+                return
+            }
 
             //获取数据
             let data = {};
             data.title = text.value;
             data.completed = false;
-
             //提交数据
             //先判断是更新数据,还是创建数据
             if (!text.$id && text.$id !== 0) {
